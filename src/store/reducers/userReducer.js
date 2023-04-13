@@ -1,20 +1,10 @@
+// const GET_ACCOUNTS_SUCCESS = 'get_accounts_success';
+// const LOGIN_SUCCESS = 'login_success';
+// const LOGOUT_SUCCESS = 'logout_success';
 
+const initialState = {
+};
 
-export default function userReducer(state = initialState, { type, payload }) {
-    switch (type) {
-    // case ACTION_TYPES.GET_ROOMS_SUCCESS:
-    //   return { ...state, ...payload };
-    // case ACTION_TYPES.UPDATE_ROOM_SUCCESS:
-    //   return {
-    //     ...state,
-    //     [payload.id]: {
-    //       ...state[payload.id],
-    //       ...payload.data,
-    //     },
-    //   };
-    // case ACTION_TYPES.LOGOUT:
-    //   return initialState;
-    // default:
-    //   return state;
-    }
-  }
+export default function userReducer(state = [initialState], { type, payload }) {
+  return state;
+};

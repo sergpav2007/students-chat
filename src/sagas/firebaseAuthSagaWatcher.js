@@ -1,3 +1,5 @@
-const firebaseAuthSagaWatcher = {}
+import { apply } from 'redux-saga/effects';
 
-export default firebaseAuthSagaWatcher;
+export default function* firebaseAuthSagaWatcher() {
+    yield apply(console, console.log, ['firebaseAuthSagaWatcher'])
+}
