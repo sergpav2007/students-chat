@@ -13,4 +13,4 @@ const sagasList = [
 
 export default function* watchRootSaga () {
    yield all (sagasList.map ((saga) => call (saga)))
-}
+};

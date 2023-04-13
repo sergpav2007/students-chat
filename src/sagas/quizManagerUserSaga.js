@@ -1,3 +1,5 @@
-const quizManagerUserSaga = {}
+import { apply } from 'redux-saga/effects';
 
-export default quizManagerUserSaga;
+export default function* watchQuizUserSaga() {
+    yield apply(console, console.log, ['watchQuizUserSaga'])
+};
