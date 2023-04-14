@@ -1,14 +1,14 @@
 import { all, call } from 'redux-saga/effects';
 import chatSaga from './chatSaga';
 import quizManagerUserSaga from './quizManagerUserSaga';
-import localStorageManagerSaga from './localStorageManagerSaga';
-import firebaseAuthSagaWatcher from './firebaseAuthSagaWatcher';
+import localStorageManagerSaga from './localStorageManager/localStorageManagerSaga';
+import firebaseAuthSaga from './firebaseSaga/firebaseAuthSaga';
 
 const sagasList = [
     chatSaga,
     quizManagerUserSaga,
     localStorageManagerSaga,
-    firebaseAuthSagaWatcher,
+    firebaseAuthSaga,
 ];
 
 export default function* watchRootSaga () {

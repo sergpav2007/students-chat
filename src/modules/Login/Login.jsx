@@ -3,14 +3,14 @@ import { LoginWrapper, ButtonContainer } from './styledComponents';
 import CustomButton from '../customComponents/customButton/CustomButton';
 import googleImage from '../../assets/images/google.svg';
 
-const Login = () => {
+const Login = ({ signInWithGoogle } ) => {
     return (
         <LoginWrapper>
             <ButtonContainer>
                 <CustomButton
                     text={'Login with Google'}
                     image={googleImage}
-                    callback={() => console.log('Click to login button')}
+                    callback={signInWithGoogle}
                     borderColor={'yellow'}
                     isInversionTextColor
                 >
