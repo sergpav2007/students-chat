@@ -1,7 +1,7 @@
+import { combineReducers } from 'redux';
 import userReducer from "./userReducer";
 import chatReducer from "./chatReducer";
 import quizReducer from "./quizReducer";
-import { combineReducers } from 'redux';
 
 const rootReducer = combineReducers ({
     userState: userReducer,

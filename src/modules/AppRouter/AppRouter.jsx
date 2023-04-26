@@ -3,8 +3,7 @@ import { Route, Routes } from "react-router-dom";
 import * as routes from '../../routes';
 import * as constants from '../../constants/constants';
 
-const AppRouter = () => {
-    const user = true;
+const AppRouter = ({ user, }) => {
     return (
         user ?
             <Routes>

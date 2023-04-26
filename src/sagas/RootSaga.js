@@ -1,7 +1,7 @@
 import { all, call } from 'redux-saga/effects';
-import chatSaga from './chatSaga';
-import quizManagerUserSaga from './quizManagerUserSaga';
-import localStorageManagerSaga from './localStorageManager/localStorageManagerSaga';
+import chatSaga from './chatSaga/chatSaga';
+import quizManagerUserSaga from './quizSaga/quizManagerUserSaga';
+import localStorageManagerSaga from './localStorageManager/saga';
 import firebaseAuthSaga from './firebaseSaga/firebaseAuthSaga';
 
 const sagasList = [

@@ -2,6 +2,7 @@ import React from 'react';
 import { LoginWrapper, ButtonContainer } from './styledComponents';
 import CustomButton from '../customComponents/customButton/CustomButton';
 import googleImage from '../../assets/images/google.svg';
+import colors from '../../manager/themeManager/colors';
 
 const Login = ({ signInWithGoogle } ) => {
     return (

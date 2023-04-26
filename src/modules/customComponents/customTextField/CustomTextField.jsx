@@ -1,13 +1,13 @@
 import React, { useRef, useState } from 'react';
 import { TextField, TextFieldButton, TextFieldWrapper, TextfieldContainer } from './styledComponents';
 
-const CustomTextField = () => {
+const CustomTextField = ({ sendMessage, }) => {
     const [value, setValue] = useState('');
     const textRef = useRef();
 
     const onClickHandler = () => {
         if (value) {
-            console.log(value);
+            sendMessage(value);
             setValue('');
         }
     };
@@ -22,7 +22,7 @@ const CustomTextField = () => {
             event.preventDefault();
             event.stopPropagation();
             if (value) {
-                console.log(value);
+                sendMessage(value);
                 setValue('');
             }
         }
@@ -39,9 +39,7 @@ const CustomTextField = () => {
                     onKeyDown={handleOnFocus}
                 />
             </TextFieldWrapper>
-            <TextFieldButton onClick={onClickHandler}>
-                SEND
-            </TextFieldButton>
+            <TextFieldButton onClick={onClickHandler} children={'SEND'} />
         </TextfieldContainer>
      );
 };

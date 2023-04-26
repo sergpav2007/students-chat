@@ -1,10 +1,17 @@
-// const GET_POSTS_SUCCESS = 'get_posts_success';
-// const UPDATE_POSTS_SUCCESS = 'update_posts_success';
-// const LOGOUT = 'logout';
+import actionTypes from '../../constants/actionTypes';
 
 const initialState = {
+    messages: [],
 };
 
-export default function chatReducer(state = [initialState], { type, payload }) {
-  return state;
+export default function chatReducer(state = initialState, { type, payload }) {
+    switch (type) {
+        case actionTypes.SET_USERS_MESSAGES_STORE:
+            return {
+                ...state,
+                messages: [...state.messages, ...payload],
+            };
+        default:
+            return state
+    }
 };
